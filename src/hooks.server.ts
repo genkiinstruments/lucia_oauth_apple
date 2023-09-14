@@ -10,7 +10,7 @@ const csrf =
 		async ({ event, resolve }) => {
 			const forbidden =
 				event.request.method === 'POST' &&
-				event.request.headers.get('origin') !== event.url.origin &&
+				new URL(event.request.headers.get('origin')!).hostname !== event.url.hostname &&
 				isFormContentType(event.request) &&
 				!allowedPaths.includes(event.url.pathname);
 
@@ -38,7 +38,7 @@ function isFormContentType(request: Request) {
 export const oauth_handle: Handle = async ({ event, resolve }) => {
 	// we can pass `event` because we used the SvelteKit middleware
 	event.locals.auth = auth.handleRequest(event);
-	return await resolve(event);
+	return resolve(event);
 };
 
 export const handle = sequence(csrf(['/login/apple/callback']), oauth_handle);
