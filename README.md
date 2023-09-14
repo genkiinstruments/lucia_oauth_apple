@@ -3,14 +3,15 @@
 This example uses SQLite3 with `better-sqlite3`.
 
 ```bash
+# until lucia npm package is updated with latest changes to apple provider
+git submodule update --init --recursive
+pushd extern/lucia && pnpm ready && popd
+
 # install dependencies
 pnpm i
 
 # setup .env
 pnpm setup-env
-
-# until lucia npm package is updated with latest changes to apple provider
-pushd extern/lucia && pnpm ready && popd
 
 # run dev server
 pnpm dev
