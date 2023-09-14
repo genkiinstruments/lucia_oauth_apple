@@ -29,8 +29,6 @@ OAuth integration for Apple. Refer to Apple Docs:
 * [Requesting Access Token](https://developer.apple.com/documentation/sign_in_with_apple/request_an_authorization_to_the_sign_in_with_apple_server)
 * [How to validate tokens](https://developer.apple.com/documentation/sign_in_with_apple/generate_and_validate_tokens)
 
-The redirect URI must not be localhost, so use a service like tunnelto.dev or similar.
-
 ```bash
 APPLE_CLIENT_ID = ""
 APPLE_TEAM_ID = ""
@@ -38,6 +36,10 @@ APPLE_KEY_ID = ""
 APPLE_REDIRECT_URI = ""
 APPLE_CERTIFICATE_FILE = "<path/to/certificate.p8>"
 ```
+
+### Notes
+* The user name and email fields are **only** provided for the first login. To reset, go to https://appleid.apple.com/account/manage -> Sign in with Apple -> Click the service name -> Stop using Sign in With Apple.
+* The redirect URI does not work on localhost, so use a service like https://tunnelto.dev/ or a similar service.
 
 ## User schema
 
