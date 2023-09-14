@@ -10,6 +10,7 @@ pnpm i
 pnpm setup-env
 
 # until lucia npm package is updated with latest changes to apple provider
+git submodule update --init --recursive
 pushd extern/lucia && pnpm ready && popd
 
 # run dev server
