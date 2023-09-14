@@ -6,17 +6,17 @@ settings:
 
 dependencies:
   '@lucia-auth/adapter-sqlite':
-    specifier: /Users/genki/development/lucia/packages/adapter-sqlite
-    version: link:../lucia/packages/adapter-sqlite
+    specifier: ./extern/lucia/packages/adapter-sqlite
+    version: link:extern/lucia/packages/adapter-sqlite
   '@lucia-auth/oauth':
-    specifier: /Users/genki/development/lucia/packages/oauth
-    version: link:../lucia/packages/oauth
+    specifier: ./extern/lucia/packages/oauth
+    version: link:extern/lucia/packages/oauth
   better-sqlite3:
     specifier: ^8.4.0
     version: 8.4.0
   lucia:
-    specifier: /Users/genki/development/lucia/packages/lucia/
-    version: link:../lucia/packages/lucia
+    specifier: ./extern/lucia/packages/lucia/
+    version: link:extern/lucia/packages/lucia
 
 devDependencies:
   '@sveltejs/adapter-auto':
