@@ -1,0 +1,3 @@
+[submodule "extern/lucia"]
+	path = extern/lucia
+	url = https://github.com/pilcrowOnPaper/lucia.git
